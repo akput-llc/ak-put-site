@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АК-Путь | Контроль напряжений в рельсах</title>
+    <style>
+        /* Базовые стили */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Шапка */
+        header {
+            background: #1a2a3a;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            letter-spacing: 1px;
+        }
+        header p {
+            margin: 5px 0 0;
+            color: #a0c4ff;
+            font-size: 1.1em;
+        }
+        /* Основной блок */
+        .hero {
+            background: #fff;
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 4px solid #0056b3;
+        }
+        .hero h2 {
+            font-size: 2.2em;
+            color: #1a2a3a;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        .btn {
+            display: inline-block;
+            background: #0056b3;
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #003d82;
+        }
+        /* Блок информации о продукте */
+        .product-info {
+            padding: 60px 0;
+            background: #f4f7f6;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .product-text h3 {
+            color: #1a2a3a;
+            font-size: 1.8em;
+            margin-top: 0;
+        }
+        .product-text ul {
+            list-style: none;
+            padding: 0;
+        }
+        .product-text ul li {
+            background: #fff;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-left: 5px solid #0056b3;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .product-image {
+            text-align: center;
+            background: #e9ecef;
+            padding: 40px;
+            border-radius: 8px;
+            color: #666;
+        }
+        /* Блок с логотипами и текстом поддержки (ОБЯЗАТЕЛЬНО) */
+        .support-block {
+            background: #fff;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        .logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .logos img {
+            height: 80px; /* Минимальная высота, чтобы соответствовать требованиям */
+            width: auto;
+            max-width: 100%;
+        }
+        .support-text {
+            font-size: 0.95em;
+            color: #555;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.5;
+            padding: 0 20px;
+        }
+        /* Подвал */
+        footer {
+            background: #1a2a3a;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+        }
+        /* Адаптивность для телефонов */
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            .logos img {
+                height: 60px; /* На телефонах можно чуть меньше, но следите за шириной */
+            }
+            .hero h2 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <h1>ООО «АК-Путь»</h1>
+            <p>Инновационные технологии контроля рельсового пути</p>
+        </div>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="container">
+            <h2>Контроль температурных напряжений в плетях бесстыкового пути</h2>
+            <p>Портативное устройство для оперативного выявления предвыбросного состояния рельсов на основе акустического метода.</p>
+            <a href="#contact" class="btn">Связаться с нами</a>
+        </div>
+    </section>
+
+    <!-- Информация о продукте -->
+    <section class="product-info">
+        <div class="container">
+            <div class="product-grid">
+                <div class="product-text">
+                    <h3>О продукте</h3>
+                    <p>Наше устройство предназначено для определения продольных температурных напряжений в рельсовых плетях. Принцип действия основан на законе Мерсенна: по измеренной частоте звука, возникающего при ударе, вычисляется величина напряжений.</p>
+                    <ul>
+                        <li><strong>Высокая точность:</strong> определение опасных участков до 10 метров.</li>
+                        <li><strong>Простота:</strong> не требует специальных навыков и сложного оборудования.</li>
+                        <li><strong>Экономия:</strong> снижение эксплуатационных расходов за счет сокращения необоснованных разрядок рельсов.</li>
+                    </ul>
+                </div>
+                <div class="product-image">
+                    <!-- Здесь можно разместить фото устройства, если оно есть -->
+                    <p>[Место для изображения устройства]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ОБЯЗАТЕЛЬНЫЙ БЛОК: Логотипы и текст поддержки -->
+    <section class="support-block">
+        <div class="container">
+            <div class="logos">
+                <!-- Вставьте сюда логотип Фонда содействия инновациям -->
+                <img src="logo-fasie.png" alt="Фонд содействия инновациям">
+                <!-- Вставьте сюда логотип Платформы университетского технологического предпринимательства -->
+                <img src="logo-platforma.png" alt="Платформа университетского технологического предпринимательства">
+            </div>
+            <div class="support-text">
+                Проект реализован при поддержке Фонда содействия инновациям в рамках программы «Студенческий стартап» Платформы университетского технологического предпринимательства федерального проекта «Технологии», входящего в состав национального проекта «Эффективная и конкурентная экономика».
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты (для кнопки) -->
+    <section id="contact" style="padding: 60px 0; text-align: center; background: #fff;">
+        <div class="container">
+            <h3>Свяжитесь с нами</h3>
+            <p>По вопросам сотрудничества и приобретения устройства:</p>
+            <p><strong>Email:</strong> POVNAS@GMAIL.COM</p>
+            <p><strong>Телефон:</strong> +7 (XXX) XXX-XX-XX</p>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ООО «АК-Путь». Все права защищены.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
