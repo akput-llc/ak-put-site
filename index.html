@@ -62,10 +62,12 @@
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
-            transition: background 0.3s;
+            transition: background 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .btn:hover {
             background: #003d82;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
         /* Блок информации о продукте */
         .product-info {
@@ -98,11 +100,21 @@
         .product-image {
             text-align: center;
             background: #e9ecef;
-            padding: 40px;
+            padding: 20px; /* Уменьшил отступ, чтобы картинка была крупнее */
             border-radius: 8px;
             color: #666;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
         }
-        /* Блок с логотипами и текстом поддержки (ОБЯЗАТЕЛЬНО) */
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Тень для объема */
+        }
+        /* Блок с логотипами и текстом поддержки */
         .support-block {
             background: #fff;
             padding: 40px 0;
@@ -119,7 +131,7 @@
             margin-bottom: 20px;
         }
         .logos img {
-            height: 80px; /* Минимальная высота, чтобы соответствовать требованиям */
+            height: 80px;
             width: auto;
             max-width: 100%;
         }
@@ -145,7 +157,7 @@
                 grid-template-columns: 1fr;
             }
             .logos img {
-                height: 60px; /* На телефонах можно чуть меньше, но следите за шириной */
+                height: 60px;
             }
             .hero h2 {
                 font-size: 1.8em;
@@ -186,8 +198,8 @@
                     </ul>
                 </div>
                 <div class="product-image">
-                    <!-- Здесь можно разместить фото устройства, если оно есть -->
-                    <img src="device.jpg" alt="Устройство контроля напряжений" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <!-- Вставленная картинка устройства -->
+                    <img src="device.jpg" alt="Устройство контроля напряжений в рельсах">
                 </div>
             </div>
         </div>
@@ -197,9 +209,7 @@
     <section class="support-block">
         <div class="container">
             <div class="logos">
-                <!-- Вставьте сюда логотип Фонда содействия инновациям -->
                 <img src="logo-fasie.png" alt="Фонд содействия инновациям">
-                <!-- Вставьте сюда логотип Платформы университетского технологического предпринимательства -->
                 <img src="logo-platforma.png" alt="Платформа университетского технологического предпринимательства">
             </div>
             <div class="support-text">
@@ -214,7 +224,7 @@
             <h3>Свяжитесь с нами</h3>
             <p>По вопросам сотрудничества и приобретения устройства:</p>
             <p><strong>Email:</strong> POVNAS@GMAIL.COM</p>
-            <p><strong>Телефон:</strong> +7 (XXX) XXX-XX-XX</p>
+            <p><strong>Телефон:</strong> +7 (906) 914-97-38</p>
         </div>
     </section>
 
